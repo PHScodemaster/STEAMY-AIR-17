@@ -39,7 +39,6 @@ public class RobotMap {
     public static Compressor pneumaticsCompressor1;
     public static Relay pneumaticsRelaySolenoid1;
     public static DoubleSolenoid pneumaticsDoubleSolenoid1;
-    public static SpeedController picker/ShooterSpeedController1;
     public static Encoder driveQuadratureEncoder1;
     public static Encoder driveQuadratureEncoder2;
     public static Encoder driveQuadratureEncoder3;
@@ -68,9 +67,6 @@ public class RobotMap {
         
         pneumaticsDoubleSolenoid1 = new DoubleSolenoid(0, 1, 2);
         LiveWindow.addActuator("Pneumatics", "Double Solenoid 1", pneumaticsDoubleSolenoid1);
-        
-        picker/ShooterSpeedController1 = new Talon(7);
-        LiveWindow.addActuator("Picker/ Shooter", "Speed Controller 1", (Talon) picker/ShooterSpeedController1);
         
         driveQuadratureEncoder1 = new Encoder(0, 1, false, EncodingType.k4X);
         LiveWindow.addSensor("Drive", "Quadrature Encoder 1", driveQuadratureEncoder1);
