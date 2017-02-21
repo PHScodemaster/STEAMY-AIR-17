@@ -26,15 +26,14 @@ public class Robot extends SampleRobot {
 
 	public Robot() {
 		robotDrive = new RobotDrive(kFrontLeftChannel, kRearLeftChannel, kFrontRightChannel, kRearRightChannel);
-		robotDrive.setInvertedMotor(MotorType.kFrontLeft, true); // invert the
-																	// left side
-																	// motors
-		robotDrive.setInvertedMotor(MotorType.kRearLeft, true); // you may need
-																// to change or
-																// remove this
-																// to match your
-																// robot
+		//Motors are over here (if you cannot read)
+		robotDrive.setInvertedMotor(MotorType.kFrontLeft, false); // invert the left side motors
+		robotDrive.setInvertedMotor(MotorType.kRearLeft, false);  // you may need to change or remove this
+																  // to match your robot
+		robotDrive.setInvertedMotor(MotorType.kFrontRight, true);
+		robotDrive.setInvertedMotor(MotorType.kRearRight, true);
 		robotDrive.setExpiration(0.1);
+		//ssstick.getY
 	}
 
 	/**
@@ -49,6 +48,8 @@ public class Robot extends SampleRobot {
 			// movement, and Z axis for rotation.
 			// This sample does not use field-oriented drive, so the gyro input
 			// is set to zero.
+			
+			//robotDrive.mecanumDrive_Cartesian(stick.getX(), stick.getY(), stick.getZ(), 0);
 			robotDrive.mecanumDrive_Cartesian(stick.getX(), stick.getY(), stick.getZ(), 0);
 
 			Timer.delay(0.005); // wait 5ms to avoid hogging CPU cycles
