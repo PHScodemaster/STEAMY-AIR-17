@@ -50,5 +50,24 @@ public class Pneumatics extends Subsystem {
         // Set the default command for a subsystem here.
         // setDefaultCommand(new MySpecialCommand());
     }
+    
+    public void raiseBoxToLevel1 () {
+    	liftSolenoid1.set(true);
+    	
+    	
+    }
+    public void raiseBoxToLevel2 () {
+    	liftSolenoid2.set(true);
+    }
+    public void raiseBoxToLevel0 () {
+    	liftSolenoid1.set(false);
+    	liftSolenoid2.set(false);
+    }
+    public void shakeBox () {
+    	rockerSolenoid.set(true);
+    }
+    public void hangGear () {
+    	gobblerSolenoid.set(true);
+    }
 }
 
