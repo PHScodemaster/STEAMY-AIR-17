@@ -59,7 +59,7 @@ public class Pneumatics extends Subsystem {
     public void raiseBoxToLevel2 () {
     	liftSolenoid2.set(true);
     }
-    public void raiseBoxToLevel0 () {
+    public void lowerBoxToLevel0 () {
     	liftSolenoid1.set(false);
     	liftSolenoid2.set(false);
     }
