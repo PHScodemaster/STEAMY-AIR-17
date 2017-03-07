@@ -58,5 +58,33 @@ public class Drive extends Subsystem {
         // Set the default command for a subsystem here.
         // setDefaultCommand(new MySpecialCommand());
     }
+    public void mecanumDrive(Joystick joy){
+    	robotDrive.mecanumDrive_Cartesian(xAxis, yAxis, zAxis, angle);
+    }
+    
+    /**
+     * @param xAxis
+     * 			  X axis value
+     * @param yAxis
+     * 			  Y axis value
+     * @param Zaxis
+     * 			  Z axis value
+     */
+    public void mecanumDrive(double xAxis, double yAxis, double zAxis, double angle){
+    	robotDrive.mecanumDrive_Cartesian(xAxis, yAxis, zAxis, angle);
+    }
+     /**
+      * Stop the drive from moving.
+      */
+    public void stop() {
+    	robotDrive.mecanumDrive_Cartesian(0, 0, 0, 0);
+    }
+    
+    /**
+     * @return The encoder getting the distance and speed of left front of the 
+     *         drive.
+     */
+    public Encoder 
+     */
 }
 
