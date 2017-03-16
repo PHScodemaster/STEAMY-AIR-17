@@ -14,6 +14,7 @@ package org.usfirst.frc4949.LeVapeur.subsystems;
 import org.usfirst.frc4949.LeVapeur.RobotMap;
 import org.usfirst.frc4949.LeVapeur.commands.*;
 import edu.wpi.first.wpilibj.Compressor;
+import edu.wpi.first.wpilibj.Servo;
 import edu.wpi.first.wpilibj.Solenoid;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
