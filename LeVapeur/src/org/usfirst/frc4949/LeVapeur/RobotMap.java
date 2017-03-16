@@ -39,6 +39,8 @@ public class RobotMap {
     public static Solenoid pneumaticsLiftSolenoid2;
     public static Solenoid pneumaticsGobblerSolenoid;
     public static Solenoid pneumaticsRockerSolenoid;
+    public static Servo pneumaticsLiftydo1;
+    public static Servo pneumaticsLiftydo2;
     public static SpeedController pickerPickerMotor;
     public static Encoder driveRREncoder;
     public static Encoder driveFREncoder;
@@ -74,24 +76,30 @@ public class RobotMap {
         pneumaticsRockerSolenoid = new Solenoid(0, 3);
         LiveWindow.addActuator("Pneumatics", "RockerSolenoid", pneumaticsRockerSolenoid);
         
+        pneumaticsLiftydo1 = new Servo(8);
+        LiveWindow.addActuator("Pneumatics", "Liftydo1", pneumaticsLiftydo1);
+        
+        pneumaticsLiftydo2 = new Servo(9);
+        LiveWindow.addActuator("Pneumatics", "Liftydo2", pneumaticsLiftydo2);
+        
         pickerPickerMotor = new Talon(4);
         LiveWindow.addActuator("Picker", "PickerMotor", (Talon) pickerPickerMotor);
         
         driveRREncoder = new Encoder(0, 1, false, EncodingType.k4X);
         LiveWindow.addSensor("Drive", "RR Encoder ", driveRREncoder);
-        driveRREncoder.setDistancePerPulse(1.0);
+        driveRREncoder.setDistancePerPulse(0.065625);
         driveRREncoder.setPIDSourceType(PIDSourceType.kRate);
         driveFREncoder = new Encoder(2, 3, false, EncodingType.k4X);
         LiveWindow.addSensor("Drive", "FR Encoder ", driveFREncoder);
-        driveFREncoder.setDistancePerPulse(1.0);
+        driveFREncoder.setDistancePerPulse(0.065625);
         driveFREncoder.setPIDSourceType(PIDSourceType.kRate);
         driveFLEncoder = new Encoder(4, 5, false, EncodingType.k4X);
         LiveWindow.addSensor("Drive", "FL Encoder ", driveFLEncoder);
-        driveFLEncoder.setDistancePerPulse(1.0);
+        driveFLEncoder.setDistancePerPulse(0.065625);
         driveFLEncoder.setPIDSourceType(PIDSourceType.kRate);
         driveRLEncoder = new Encoder(6, 7, false, EncodingType.k4X);
         LiveWindow.addSensor("Drive", "RL Encoder", driveRLEncoder);
-        driveRLEncoder.setDistancePerPulse(1.0);
+        driveRLEncoder.setDistancePerPulse(0.065625);
         driveRLEncoder.setPIDSourceType(PIDSourceType.kRate);
         driveFrontLeftMotor = new Talon(2);
         LiveWindow.addActuator("Drive", "FrontLeft Motor", (Talon) driveFrontLeftMotor);

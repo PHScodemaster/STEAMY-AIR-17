@@ -77,11 +77,11 @@ public class OI {
 
         joystick2 = new Joystick(1);
         
-        button_03 = new JoystickButton(joystick2, 1);
+        button_03 = new JoystickButton(joystick2, 15);
         button_03.whileHeld(new ShakeBox());
-        button_02 = new JoystickButton(joystick2, 1);
+        button_02 = new JoystickButton(joystick2, 14);
         button_02.whileHeld(new BoxToLevel2());
-        button_01 = new JoystickButton(joystick2, 1);
+        button_01 = new JoystickButton(joystick2, 13);
         button_01.whileHeld(new BoxToLevel1());
         joystick1 = new Joystick(0);
         
