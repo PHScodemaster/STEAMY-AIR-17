@@ -39,6 +39,8 @@ public class RobotMap {
     public static Solenoid pneumaticsLiftSolenoid2;
     public static Solenoid pneumaticsGobblerSolenoid;
     public static Solenoid pneumaticsRockerSolenoid;
+    public static Servo pneumaticsLiftyDo1;
+    public static Servo pneumaticsLiftyDo2;
     public static SpeedController pickerPickerMotor;
     public static Encoder driveRREncoder;
     public static Encoder driveFREncoder;
@@ -73,6 +75,12 @@ public class RobotMap {
         
         pneumaticsRockerSolenoid = new Solenoid(0, 3);
         LiveWindow.addActuator("Pneumatics", "RockerSolenoid", pneumaticsRockerSolenoid);
+        
+        pneumaticsLiftyDo1 = new Servo(8);
+        LiveWindow.addActuator("Pneumatics", "LiftyDo 1", pneumaticsLiftyDo1);
+        
+        pneumaticsLiftyDo2 = new Servo(9);
+        LiveWindow.addActuator("Pneumatics", "LiftyDo2", pneumaticsLiftyDo2);
         
         pickerPickerMotor = new Talon(4);
         LiveWindow.addActuator("Picker", "PickerMotor", (Talon) pickerPickerMotor);
