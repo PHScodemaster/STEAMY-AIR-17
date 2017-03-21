@@ -40,8 +40,8 @@ public class Drive extends Subsystem {
     private final Encoder fLEncoder = RobotMap.driveFLEncoder;
     private final Encoder rLEncoder = RobotMap.driveRLEncoder;
     private final SpeedController frontLeftMotor = RobotMap.driveFrontLeftMotor;
-    private final SpeedController rearLeftMotor = RobotMap.driveRearLeftMotor;
     private final SpeedController frontRightMotor = RobotMap.driveFrontRightMotor;
+    private final SpeedController rearLeftMotor = RobotMap.driveRearLeftMotor;
     private final SpeedController rearRightMotor = RobotMap.driveRearRightMotor;
     private final RobotDrive mecanum = RobotMap.driveMecanum;
 

@@ -47,8 +47,8 @@ public class RobotMap {
     public static Encoder driveFLEncoder;
     public static Encoder driveRLEncoder;
     public static SpeedController driveFrontLeftMotor;
-    public static SpeedController driveRearLeftMotor;
     public static SpeedController driveFrontRightMotor;
+    public static SpeedController driveRearLeftMotor;
     public static SpeedController driveRearRightMotor;
     public static RobotDrive driveMecanum;
     public static SpeedController climberClimberMotor;
@@ -101,14 +101,14 @@ public class RobotMap {
         LiveWindow.addSensor("Drive", "RL Encoder", driveRLEncoder);
         driveRLEncoder.setDistancePerPulse(1.0);
         driveRLEncoder.setPIDSourceType(PIDSourceType.kRate);
-        driveFrontLeftMotor = new Talon(2);
+        driveFrontLeftMotor = new Talon(1);
         LiveWindow.addActuator("Drive", "FrontLeft Motor", (Talon) driveFrontLeftMotor);
+        
+        driveFrontRightMotor = new Talon(2);
+        LiveWindow.addActuator("Drive", "FrontRight Motor", (Talon) driveFrontRightMotor);
         
         driveRearLeftMotor = new Talon(3);
         LiveWindow.addActuator("Drive", "RearLeft Motor", (Talon) driveRearLeftMotor);
-        
-        driveFrontRightMotor = new Talon(1);
-        LiveWindow.addActuator("Drive", "FrontRight Motor", (Talon) driveFrontRightMotor);
         
         driveRearRightMotor = new Talon(0);
         LiveWindow.addActuator("Drive", "RearRight Motor", (Talon) driveRearRightMotor);

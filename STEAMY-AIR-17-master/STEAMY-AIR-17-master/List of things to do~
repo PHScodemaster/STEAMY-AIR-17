@@ -1,0 +1,21 @@
+Move
+  -Joystick
+    -Twisty Joystick
+  -Autonomous
+Catch
+Shoot
+Climb
+Place Gears
+Sensors
+Pneumatics
+Vision
+
+Additional Instructions:
+
+  Vision and Pneumatics will aid all of these actions, and will be done by Tia.
+  Kyle will do movement/autonomous.
+  Phillip will do catching.
+  Isaac will do the operator interface.
+  Ayomide will work on placing the gears.
+  One of the thoughts regarding the catcher subsystem was that the climb substystem would be included in it, as well.
+  Low goal is priority.
