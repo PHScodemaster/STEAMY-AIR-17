@@ -75,7 +75,7 @@ public class Camera extends Subsystem {
         });
         visionThread.start();
             
-        drive = new RobotDrive(1, 2);
+       
     }
 }
 

@@ -130,6 +130,9 @@ public class Drive extends Subsystem {
         public double getAngle(){
         	return spiGyro.getAngle();
         }
+        public double getDistance(){
+        	return 0;
+        }
     }
 
     
