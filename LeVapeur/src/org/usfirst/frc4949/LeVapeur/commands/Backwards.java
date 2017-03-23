@@ -71,6 +71,7 @@ public class Backwards extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+<<<<<<< HEAD
     	if (Robot.hasEncoders) {
     		error = (distance - Robot.drive.getLeftFrontEncoder().getDistance());
     	} else {
@@ -82,16 +83,24 @@ public class Backwards extends Command {
 			Robot.drive.mecanumDrive(0, driveBackwardSpeed *kP, 0, 0);
 			
 		}	
+=======
+    	Robot.drive.mecanumDrive(0, -0.1, 0, 0);
+>>>>>>> f02d0f56de72b2998f53ca018ba562d7e0605b25
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
+<<<<<<< HEAD
     	if (error <= 0) {
     		return true;
     	}
     	else {
     		return false;
     	}
+=======
+    	Robot.drive.mecanumDrive(0, 0, 0, 0);
+        return false;
+>>>>>>> f02d0f56de72b2998f53ca018ba562d7e0605b25
     }
 
     // Called once after isFinished returns true

@@ -81,10 +81,24 @@ public class Forward extends Command {
         	distanceMoved = (currentTimeMillis - startTimeMillis) * driveForwardSpeed * kSpeedConv;
     		error = distance - distanceMoved;
     	}
+<<<<<<< HEAD
     	if ( error >= 0) {
 			Robot.drive.mecanumDrive(0, driveForwardSpeed, 0, 0);
 			
 		}	
+=======
+    	if (driveForwardSpeed * kP * error >= driveForwardSpeed) {
+			Robot.drive.mecanumDrive(0, .65, 
+					0, 0);
+//			Robot.drive.mecanumDrive(0, driveForwardSpeed, 
+//					0, 0);
+		} else {
+			Robot.drive.mecanumDrive(0, .65, 
+					0, 0);
+//			Robot.drive.mecanumDrive(0, driveForwardSpeed * kP * error, 
+//					0, 0);
+		}   	
+>>>>>>> f02d0f56de72b2998f53ca018ba562d7e0605b25
     }
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
@@ -97,7 +111,11 @@ public class Forward extends Command {
     }
     // Called once after isFinished returns true
     protected void end() {
+<<<<<<< HEAD
     	Robot.drive.stop();
+=======
+    	Robot.drive.mecanumDrive(0, 0, 0, 0);
+>>>>>>> f02d0f56de72b2998f53ca018ba562d7e0605b25
     }
 
     // Called when another command which requires one or more of the same
